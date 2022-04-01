@@ -183,10 +183,10 @@ let dailyButton = document.querySelector("#daily-button");
 let hourlyButton = document.querySelector("#hourly-button");
 let pageNumber = 0;
 dailyButton.addEventListener("click", (e) => {
-  e.target.classList.remove("border-gray-200", "text-gray-900");
-  e.target.classList.add("bg-black", "text-white");
-  hourlyButton.classList.remove("bg-black", "text-white");
-  hourlyButton.classList.add("border-gray-200", "text-gray-900");
+  e.target.classList.remove("border-gray-200");
+  e.target.classList.add("bg-black");
+  hourlyButton.classList.remove("bg-black");
+  hourlyButton.classList.add("border-gray-200");
   document.querySelector("#previous-button").classList.add("hidden");
   document.querySelector("#next-button").classList.add("hidden");
   pageNumber = 0;
@@ -195,10 +195,10 @@ dailyButton.addEventListener("click", (e) => {
 
 hourlyButton.addEventListener("click", (e) => {
   document.querySelector(".hourly").classList.add("w-11/12");
-  e.target.classList.remove("border-gray-200", "text-gray-900");
-  e.target.classList.add("bg-black", "text-white");
-  dailyButton.classList.remove("bg-black", "text-white");
-  dailyButton.classList.add("border-gray-200", "text-gray-900");
+  e.target.classList.remove("border-gray-200");
+  e.target.classList.add("bg-black");
+  dailyButton.classList.remove("bg-black");
+  dailyButton.classList.add("border-gray-200");
   document.querySelector("#previous-button").classList.remove("hidden");
   document.querySelector("#next-button").classList.remove("hidden");
   pageNumber = 1;
