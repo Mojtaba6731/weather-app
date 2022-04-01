@@ -10,12 +10,12 @@
 
   <body class="min-h-screen font-mono">
     <div
-      class="weather-app min-h-screen bg-slate-50 py-6 flex flex-col items-center relative overflow-hidden"
+      class="weather-app min-h-screen bg-[url('../img/mountains.jpg')] bg-cover py-6 flex flex-col items-center relative overflow-hidden"
     >
       <div class="general-info flex flex-col items-start">
         <div class="city-name text-4xl">0</div>
-        <div class="date text-gray-600">0</div>
-        <div class="time -mt-2 text-gray-600">0</div>
+        <div class="date text-gray-900">0</div>
+        <div class="time -mt-2 text-gray-900">0</div>
         <div class="flex justify-center w-full my-6">
           <div class="weather-temp text-6xl text-center">0</div>
         </div>
@@ -37,6 +37,7 @@
               d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
             />
           </svg>
+
           <input
             id="search-box-input"
             class="focus:ring-2 focus:ring-blue-500 focus:outline-none w-full text-sm leading-6 text-gray-900 placeholder-gray-400 rounded-md py-2 pl-10 ring-1 ring-gray-200 shadow-sm"
@@ -51,35 +52,35 @@
         class="details-info text-center grid grid-flow-col grid-rows-3 grid-cols-2 gap-8 my-4"
       >
         <div id="real-feel">
-          <div class="real-feel-text text-gray-600">
+          <div class="real-feel-text text-gray-900">
             <p class="text-sm">Real Feel</p>
           </div>
           <div id="real-feel-value" class="text-2xl"></div>
         </div>
 
         <div id="humidity">
-          <div class="humidity-text text-gray-600">
+          <div class="humidity-text text-gray-900">
             <p class="text-sm">Humidity</p>
           </div>
           <div id="humidity-value" class="text-2xl"></div>
         </div>
 
         <div id="chance-of-rain">
-          <div class="chance-of-rain-text text-gray-600">
+          <div class="chance-of-rain-text text-black">
             <p class="text-sm">Chance Of Rain</p>
           </div>
           <div id="chance-of-rain-value" class="text-2xl"></div>
         </div>
 
         <div id="pressure">
-          <div class="pressure-tex text-gray-600">
+          <div class="pressure-tex text-gray-900">
             <p class="text-sm">Pressure</p>
           </div>
           <div id="pressure-value" class="text-2xl">O</div>
         </div>
 
         <div id="wind-speed">
-          <div class="wind-speed-tex text-gray-600">
+          <div class="wind-speed-tex text-gray-900">
             <p class="text-sm">Wind Speed</p>
           </div>
           <div id="wind-speed-value" class="text-2xl">O</div>
@@ -93,21 +94,21 @@
       <div class="flex-auto flex space-x-4">
         <button
           id="daily-button"
-          class="h-10 px-6 font-semibold rounded-md bg-black text-white"
+          class="h-10 px-6 font-semibold rounded-md bg-black border border-gray-200 text-white"
           type="submit"
         >
           Daily
         </button>
         <button
           id="hourly-button"
-          class="h-10 px-6 font-semibold rounded-md border border-gray-200 text-gray-900"
+          class="h-10 px-6 font-semibold rounded-md border border-gray-200 text-white"
           type="button"
         >
           Hourly
         </button>
       </div>
       <div
-        class="forecast w-screen bg-white py-6 m-6 shadow flex justify-evenly"
+        class="forecast w-screen backdrop-blur-sm bg-white/30 py-6 m-6 shadow flex justify-evenly"
       >
         <button
           type="button"
@@ -128,7 +129,7 @@
         </button>
         <div class="daily w-11/12 flex justify-evenly">
           <div data-daily="day-0" class="flex flex-col items-center">
-            <div data-daily="0-day-of-week" class="text-lg text-gray-600"></div>
+            <div data-daily="0-day-of-week" class="text-lg text-gray-100"></div>
             <div data-daily="0-temp-max" class="text-3xl mt-3"></div>
             <div data-daily="0-temp-min"></div>
             <div>
@@ -136,7 +137,7 @@
             </div>
           </div>
           <div data-daily="day-1" class="flex flex-col items-center">
-            <div data-daily="1-day-of-week" class="text-lg text-gray-600"></div>
+            <div data-daily="1-day-of-week" class="text-lg text-gray-100"></div>
             <div data-daily="1-temp-max" class="text-3xl mt-3"></div>
             <div data-daily="1-temp-min"></div>
             <div>
@@ -144,7 +145,7 @@
             </div>
           </div>
           <div data-daily="day-2" class="flex flex-col items-center">
-            <div data-daily="2-day-of-week" class="text-lg text-gray-600"></div>
+            <div data-daily="2-day-of-week" class="text-lg text-gray-100"></div>
             <div data-daily="2-temp-max" class="text-3xl mt-3"></div>
             <div data-daily="2-temp-min"></div>
             <div>
@@ -152,7 +153,7 @@
             </div>
           </div>
           <div data-daily="day-3" class="flex flex-col items-center">
-            <div data-daily="3-day-of-week" class="text-lg text-gray-600"></div>
+            <div data-daily="3-day-of-week" class="text-lg text-gray-100"></div>
             <div data-daily="3-temp-max" class="text-3xl mt-3"></div>
             <div data-daily="3-temp-min"></div>
             <div>
@@ -160,7 +161,7 @@
             </div>
           </div>
           <div data-daily="day-4" class="flex flex-col items-center">
-            <div data-daily="4-day-of-week" class="text-lg text-gray-600"></div>
+            <div data-daily="4-day-of-week" class="text-lg text-gray-100"></div>
             <div data-daily="4-temp-max" class="text-3xl mt-3"></div>
             <div data-daily="4-temp-min"></div>
             <div>
@@ -168,7 +169,7 @@
             </div>
           </div>
           <div data-daily="day-5" class="flex flex-col items-center">
-            <div data-daily="5-day-of-week" class="text-lg text-gray-600"></div>
+            <div data-daily="5-day-of-week" class="text-lg text-gray-100"></div>
             <div data-daily="5-temp-max" class="text-3xl mt-3"></div>
             <div data-daily="5-temp-min"></div>
             <div>
@@ -176,7 +177,7 @@
             </div>
           </div>
           <div data-daily="day-6" class="flex flex-col items-center">
-            <div data-daily="6-day-of-week" class="text-lg text-gray-600"></div>
+            <div data-daily="6-day-of-week" class="text-lg text-gray-100"></div>
             <div data-daily="6-temp-max" class="text-3xl mt-3"></div>
             <div data-daily="6-temp-min"></div>
             <div>
@@ -190,7 +191,7 @@
             <div data-hourly="hour-0" class="flex flex-col items-center">
               <div
                 data-hourly="date-hour-0"
-                class="text-xl text-gray-600"
+                class="text-xl text-gray-100"
               ></div>
               <div
                 data-hourly="temp-hour-0"
@@ -201,7 +202,7 @@
             <div data-hourly="hour-1" class="flex flex-col items-center">
               <div
                 data-hourly="date-hour-1"
-                class="text-xl text-gray-600"
+                class="text-xl text-gray-100"
               ></div>
               <div
                 data-hourly="temp-hour-1"
@@ -212,7 +213,7 @@
             <div data-hourly="hour-2" class="flex flex-col items-center">
               <div
                 data-hourly="date-hour-2"
-                class="text-xl text-gray-600"
+                class="text-xl text-gray-100"
               ></div>
               <div
                 data-hourly="temp-hour-2"
@@ -223,7 +224,7 @@
             <div data-hourly="hour-3" class="flex flex-col items-center">
               <div
                 data-hourly="date-hour-3"
-                class="text-xl text-gray-600"
+                class="text-xl text-gray-100"
               ></div>
               <div
                 data-hourly="temp-hour-3"
@@ -234,7 +235,7 @@
             <div data-hourly="hour-4" class="flex flex-col items-center">
               <div
                 data-hourly="date-hour-4"
-                class="text-xl text-gray-600"
+                class="text-xl text-gray-100"
               ></div>
               <div
                 data-hourly="temp-hour-4"
@@ -245,7 +246,7 @@
             <div data-hourly="hour-5" class="flex flex-col items-center">
               <div
                 data-hourly="date-hour-5"
-                class="text-xl text-gray-600"
+                class="text-xl text-gray-100"
               ></div>
               <div
                 data-hourly="temp-hour-5"
@@ -256,7 +257,7 @@
             <div data-hourly="hour-6" class="flex flex-col items-center">
               <div
                 data-hourly="date-hour-6"
-                class="text-xl text-gray-600"
+                class="text-xl text-gray-100"
               ></div>
               <div
                 data-hourly="temp-hour-6"
@@ -267,7 +268,7 @@
             <div data-hourly="hour-7" class="flex flex-col items-center">
               <div
                 data-hourly="date-hour-7"
-                class="text-xl text-gray-600"
+                class="text-xl text-gray-100"
               ></div>
               <div
                 data-hourly="temp-hour-7"
@@ -278,7 +279,7 @@
             <div data-hourly="hour-8" class="flex flex-col items-center">
               <div
                 data-hourly="date-hour-8"
-                class="text-xl text-gray-600"
+                class="text-xl text-gray-100"
               ></div>
               <div
                 data-hourly="temp-hour-8"
@@ -292,7 +293,7 @@
             <div data-hourly="hour-9" class="flex flex-col items-center">
               <div
                 data-hourly="date-hour-9"
-                class="text-xl text-gray-600"
+                class="text-xl text-gray-100"
               ></div>
               <div
                 data-hourly="temp-hour-9"
@@ -303,7 +304,7 @@
             <div data-hourly="hour-10" class="flex flex-col items-center">
               <div
                 data-hourly="date-hour-10"
-                class="text-xl text-gray-600"
+                class="text-xl text-gray-100"
               ></div>
               <div
                 data-hourly="temp-hour-10"
@@ -314,7 +315,7 @@
             <div data-hourly="hour-11" class="flex flex-col items-center">
               <div
                 data-hourly="date-hour-11"
-                class="text-xl text-gray-600"
+                class="text-xl text-gray-100"
               ></div>
               <div
                 data-hourly="temp-hour-11"
@@ -325,7 +326,7 @@
             <div data-hourly="hour-12" class="flex flex-col items-center">
               <div
                 data-hourly="date-hour-12"
-                class="text-xl text-gray-600"
+                class="text-xl text-gray-100"
               ></div>
               <div
                 data-hourly="temp-hour-12"
@@ -336,7 +337,7 @@
             <div data-hourly="hour-13" class="flex flex-col items-center">
               <div
                 data-hourly="date-hour-13"
-                class="text-xl text-gray-600"
+                class="text-xl text-gray-100"
               ></div>
               <div
                 data-hourly="temp-hour-13"
@@ -347,7 +348,7 @@
             <div data-hourly="hour-14" class="flex flex-col items-center">
               <div
                 data-hourly="date-hour-14"
-                class="text-xl text-gray-600"
+                class="text-xl text-gray-100"
               ></div>
               <div
                 data-hourly="temp-hour-14"
@@ -358,7 +359,7 @@
             <div data-hourly="hour-15" class="flex flex-col items-center">
               <div
                 data-hourly="date-hour-15"
-                class="text-xl text-gray-600"
+                class="text-xl text-gray-100"
               ></div>
               <div
                 data-hourly="temp-hour-15"
@@ -369,7 +370,7 @@
             <div data-hourly="hour-16" class="flex flex-col items-center">
               <div
                 data-hourly="date-hour-16"
-                class="text-xl text-gray-600"
+                class="text-xl text-gray-100"
               ></div>
               <div
                 data-hourly="temp-hour-16"
@@ -383,7 +384,7 @@
             <div data-hourly="hour-17" class="flex flex-col items-center">
               <div
                 data-hourly="date-hour-17"
-                class="text-xl text-gray-600"
+                class="text-xl text-gray-100"
               ></div>
               <div
                 data-hourly="temp-hour-17"
@@ -394,7 +395,7 @@
             <div data-hourly="hour-18" class="flex flex-col items-center">
               <div
                 data-hourly="date-hour-18"
-                class="text-xl text-gray-600"
+                class="text-xl text-gray-100"
               ></div>
               <div
                 data-hourly="temp-hour-18"
@@ -405,7 +406,7 @@
             <div data-hourly="hour-19" class="flex flex-col items-center">
               <div
                 data-hourly="date-hour-19"
-                class="text-xl text-gray-600"
+                class="text-xl text-gray-100"
               ></div>
               <div
                 data-hourly="temp-hour-19"
@@ -416,7 +417,7 @@
             <div data-hourly="hour-20" class="flex flex-col items-center">
               <div
                 data-hourly="date-hour-20"
-                class="text-xl text-gray-600"
+                class="text-xl text-gray-100"
               ></div>
               <div
                 data-hourly="temp-hour-20"
@@ -427,7 +428,7 @@
             <div data-hourly="hour-21" class="flex flex-col items-center">
               <div
                 data-hourly="date-hour-21"
-                class="text-xl text-gray-600"
+                class="text-xl text-gray-100"
               ></div>
               <div
                 data-hourly="temp-hour-21"
@@ -438,7 +439,7 @@
             <div data-hourly="hour-22" class="flex flex-col items-center">
               <div
                 data-hourly="date-hour-22"
-                class="text-xl text-gray-600"
+                class="text-xl text-gray-100"
               ></div>
               <div
                 data-hourly="temp-hour-22"
@@ -449,7 +450,7 @@
             <div data-hourly="hour-23" class="flex flex-col items-center">
               <div
                 data-hourly="date-hour-23"
-                class="text-xl text-gray-600"
+                class="text-xl text-gray-100"
               ></div>
               <div
                 data-hourly="temp-hour-23"
@@ -460,7 +461,7 @@
             <div data-hourly="hour-24" class="flex flex-col items-center">
               <div
                 data-hourly="date-hour-24"
-                class="text-xl text-gray-600"
+                class="text-xl text-gray-100"
               ></div>
               <div
                 data-hourly="temp-hour-24"

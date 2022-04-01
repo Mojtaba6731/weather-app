@@ -1,4 +1,9 @@
 {
+  "homepage": "http:/mojtaba6731.github.io/weather-app",
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
   "devDependencies": {
     "tailwindcss": "^3.0.8"
   }
